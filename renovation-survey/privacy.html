@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>プライバシーポリシー | 劣化調査アプリ — NK-FIELD</title>
+<title>プライバシーポリシー / Privacy Policy | 劣化調査アプリ — NK-FIELD</title>
 <meta name="robots" content="noindex">
 <style>
   * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -17,10 +17,24 @@
   }
   header {
     background: linear-gradient(160deg, var(--blue) 0%, var(--blue-deep) 100%);
-    color: #fff; padding: 34px 20px; text-align: center;
+    color: #fff; padding: 34px 20px; text-align: center; position: relative;
   }
   header h1 { font-size: 24px; font-weight: 800; }
   header p { font-size: 13px; margin-top: 6px; opacity: .92; }
+  .langbar {
+    display: flex; justify-content: center; gap: 8px; margin-bottom: 16px;
+  }
+  .langbar button {
+    font: inherit; font-size: 13px; cursor: pointer;
+    background: rgba(255,255,255,.14); color: #fff;
+    border: 1px solid rgba(255,255,255,.5); border-radius: 999px;
+    padding: 5px 18px; transition: background .15s;
+  }
+  .langbar button:hover { background: rgba(255,255,255,.28); }
+  .langbar button[aria-pressed="true"] {
+    background: #fff; color: var(--blue-deep); font-weight: 700;
+    border-color: #fff;
+  }
   main { max-width: 820px; margin: 0 auto; padding: 34px 20px 40px; }
   article {
     background: #fff; border: 1px solid var(--line); border-radius: 14px;
@@ -39,16 +53,24 @@
     color: var(--muted); border-top: 1px solid var(--line); background: #fff;
   }
   footer a { color: var(--blue-dark); }
+  [hidden] { display: none !important; }
 </style>
 </head>
 <body>
 
 <header>
-  <h1>劣化調査アプリ プライバシーポリシー</h1>
-  <p>バージョン 2.2 ／ 最終更新日: 2026年8月6日 ／ 運営者: NK-FIELD</p>
+  <div class="langbar">
+    <button type="button" id="btn-ja" aria-pressed="true">日本語</button>
+    <button type="button" id="btn-en" aria-pressed="false">English</button>
+  </div>
+  <h1 data-ja="劣化調査アプリ プライバシーポリシー"
+      data-en="Renovation Survey — Privacy Policy">劣化調査アプリ プライバシーポリシー</h1>
+  <p data-ja="バージョン 2.2 ／ 最終更新日: 2026年8月6日 ／ 運営者: NK-FIELD"
+     data-en="Version 2.2 / Last updated: August 6, 2026 / Operator: NK-FIELD">バージョン 2.2 ／ 最終更新日: 2026年8月6日 ／ 運営者: NK-FIELD</p>
 </header>
 
-<main>
+<!-- ===================== 日本語 ===================== -->
+<main id="lang-ja">
   <article>
     <h2>第1条（基本方針）</h2>
     <pre>NK-FIELD（以下「当事業者」）は、お客様の情報保護を最優先事項と位置づけ、日本国の個人情報の保護に関する法律（個人情報保護法）その他関連法令を遵守します。</pre>
@@ -149,10 +171,156 @@
   </article>
 </main>
 
+<!-- ===================== English ===================== -->
+<main id="lang-en" hidden>
+  <article>
+    <h2>Article 1 (Basic Policy)</h2>
+    <pre>NK-FIELD (the "Operator") treats the protection of your information as a top priority and complies with the Act on the Protection of Personal Information of Japan and other applicable laws and regulations.</pre>
+  </article>
+
+  <article>
+    <h2>Article 2 (Information We Collect)</h2>
+    <pre>[Account information]
+(1) Email address and authentication identifiers (including Apple / Google account linking)
+(2) Display name and inspector name (when set by you)
+
+[Information you store in the app (survey data)]
+(3) Property and project information (property name, address, and other information about the survey target)
+(4) Drawings, site photos, and deterioration survey records (legends, quantities, positions, remarks, etc.)
+
+[Billing information]
+(5) Subscription plan and purchase history (via the App Store / Google Play). Payment details such as credit card numbers are handled by each store; the Operator does not collect them.
+
+[Information collected automatically]
+(6) Records of consent to the Terms of Use and related documents (date and time of consent, document version)
+(7) Cloud storage usage (number of photos, data size) and operation logs (audit log feature of the corporate plan, coming soon)
+(8) Advertising identifiers (IDFA / advertising ID). Collected only on plans that display advertisements, and only where permitted by your device settings (tracking permission). On iOS we request permission via App Tracking Transparency (ATT); if permission is not granted, we do not perform tracking.
+(9) Diagnostic and crash information used to improve app quality (device model, OS version, application error logs, etc.). This does not include information that identifies you personally.</pre>
+  </article>
+
+  <article>
+    <h2>Article 3 (Purposes of Use)</h2>
+    <pre>(1) Providing the app, user authentication, and account management
+(2) Cloud storage, backup, restoration, and in-organization sharing of survey data
+(3) Managing subscription plans, processing payments, and managing usage limits
+(4) Responding to inquiries and providing support
+(5) Improving quality, addressing defects, and preventing fraudulent use (including the use of diagnostic and crash information)
+(6) Delivering advertisements and measuring advertising effectiveness on plans that display advertisements
+We do not use the information for any purpose other than those listed above.</pre>
+  </article>
+
+  <article class="important">
+    <h2>Article 4 (Storage Locations and Service Providers (Third-Party Services))</h2>
+    <pre>The app uses the following external services in order to provide its functionality. Data is transmitted over encrypted connections (TLS). Storage locations include servers outside Japan (such as in the United States).
+
+(1) Firebase (Google LLC)
+   Used for authentication, database, and file storage (cloud sync, backup, and storage of site photos). With cloud sync on supported plans, survey data (including drawings and photos) is stored on servers so that it can be used across multiple devices and shared within the same organization. Files such as drawings and photos are stored on servers in Japan (Tokyo region), while management databases containing account and subscription information are processed and stored in a United States region.
+(2) RevenueCat, Inc.
+   Used to manage subscriptions (billing status).
+(3) Generative AI services (Google Gemini API / Anthropic Claude API)
+   Note: AI features are not currently offered. Accordingly, site photos are not sent to generative AI services at this time. If AI features (such as tile counting) are offered in the future, the relevant photo will be sent only when you take an action to use that feature. We will update this policy and provide notice within the app before such features become available.
+(4) Firebase Crashlytics (Google LLC)
+   Used to collect crash and diagnostic information in order to detect defects and improve app quality.
+(5) Google AdMob (Google LLC)
+   Used to deliver advertisements and measure advertising effectiveness on plans that display advertisements. On paid plans where advertisements are not displayed, no information is transmitted for ad delivery.</pre>
+  </article>
+
+  <article>
+    <h2>Article 5 (Provision to Third Parties)</h2>
+    <pre>1. Except as required by law, the Operator does not provide personal information to third parties without your consent.
+2. Use of the external services described in the preceding article constitutes entrustment of handling, or use of such services, within the scope necessary to achieve the purposes of use. We never provide information to third parties for sales purposes.</pre>
+  </article>
+
+  <article class="important">
+    <h2>Article 6 (Precautions Regarding Site Photos)</h2>
+    <pre>1. When taking photos, please take care to avoid capturing personal information of third parties (passers-by, residents, etc.), such as faces, nameplates, or vehicle license plates.
+2. You are responsible for obtaining any permissions required in relation to the surveyed building and photo data (such as the consent of the building owner or manager).</pre>
+  </article>
+
+  <article>
+    <h2>Article 7 (Retention Period and Deletion)</h2>
+    <pre>1. We retain the information we collect for the period necessary to achieve the purposes of use.
+2. You may delete data such as projects and photos at any time from within the app.
+3. Using the account deletion (withdrawal) function, you may request deletion of your account and the data stored in the cloud. Deleted data cannot be restored.
+4. Data stored in the cloud after cancellation or withdrawal is automatically deleted after approximately 30 days. (Data saved on your device remains on the device.)</pre>
+  </article>
+
+  <article>
+    <h2>Article 8 (Security Measures)</h2>
+    <pre>We take reasonable security measures to prevent leakage, loss, or damage of the information we collect, including encryption of communications (TLS), access controls, and the use of an authentication platform (Firebase Authentication).</pre>
+  </article>
+
+  <article>
+    <h2>Article 9 (Your Rights)</h2>
+    <pre>In accordance with the Act on the Protection of Personal Information, you may request disclosure, correction, addition, deletion, or suspension of use of your retained personal data. For actions available within the app (viewing, editing, and deleting data, and deleting your account), please use the in-app functions. Other requests are accepted through our inquiry form.</pre>
+  </article>
+
+  <article>
+    <h2>Article 10 (Use by Minors)</h2>
+    <pre>This app is intended for business use. If a minor uses the app, please do so with the consent of a parent or guardian.</pre>
+  </article>
+
+  <article>
+    <h2>Article 11 (Changes to This Policy)</h2>
+    <pre>This policy may be revised in response to amendments to laws and regulations or changes to the service. If there is a significant change, we will provide notice within the app and, where necessary, request your consent again.</pre>
+  </article>
+
+  <article>
+    <h2>Article 12 (Contact)</h2>
+    <pre>Operator: NK-FIELD
+Inquiry form: <a href="https://docs.google.com/forms/d/e/1FAIpQLSfAHfIVb00BNQ286ZF1bdtMzlDWUJduS3hN_vc1tAi-J_bQ8g/viewform" target="_blank" rel="noopener">https://docs.google.com/forms/d/e/1FAIpQLSfAHfIVb00BNQ286ZF1bdtMzlDWUJduS3hN_vc1tAi-J_bQ8g/viewform</a>
+(As a small, individually operated business, replies may take approximately two weeks.)
+
+This English text is a reference translation. In the event of any discrepancy, the Japanese version shall prevail.</pre>
+  </article>
+</main>
+
 <footer>
-  <p><a href="index.html">劣化調査アプリ トップへ戻る</a></p>
-  <p style="margin-top:6px;">© NK-FIELD (Kohei Nishiguchi)</p>
+  <p><a href="index.html" data-ja="劣化調査アプリ トップへ戻る" data-en="Back to app home">劣化調査アプリ トップへ戻る</a></p>
+  <p style="margin-top:6px;">&copy; NK-FIELD (Kohei Nishiguchi)</p>
 </footer>
+
+<script>
+/* 言語切替: ブラウザの言語設定を自動判定し、手動切替も可能にする。
+   URL は変えない (App Store Connect に登録済みの URL をそのまま使うため)。 */
+(function () {
+  var paneJa = document.getElementById('lang-ja');
+  var paneEn = document.getElementById('lang-en');
+  var btnJa = document.getElementById('btn-ja');
+  var btnEn = document.getElementById('btn-en');
+
+  function apply(lang) {
+    var ja = (lang === 'ja');
+    paneJa.hidden = !ja;
+    paneEn.hidden = ja;
+    btnJa.setAttribute('aria-pressed', ja ? 'true' : 'false');
+    btnEn.setAttribute('aria-pressed', ja ? 'false' : 'true');
+    document.documentElement.lang = ja ? 'ja' : 'en';
+    // ヘッダー・フッターの文言を差し替える
+    var nodes = document.querySelectorAll('[data-ja][data-en]');
+    for (var i = 0; i < nodes.length; i++) {
+      nodes[i].textContent = nodes[i].getAttribute(ja ? 'data-ja' : 'data-en');
+    }
+    try { localStorage.setItem('nkfield-privacy-lang', ja ? 'ja' : 'en'); } catch (e) {}
+  }
+
+  // 優先順位: ?lang= 指定 > 前回の選択 > ブラウザの言語 > 日本語
+  var initial = null;
+  var q = location.search.match(/[?&]lang=(ja|en)/);
+  if (q) { initial = q[1]; }
+  if (!initial) {
+    try { initial = localStorage.getItem('nkfield-privacy-lang'); } catch (e) {}
+  }
+  if (initial !== 'ja' && initial !== 'en') {
+    var nav = (navigator.language || 'ja').toLowerCase();
+    initial = nav.indexOf('ja') === 0 ? 'ja' : 'en';
+  }
+  apply(initial);
+
+  btnJa.addEventListener('click', function () { apply('ja'); });
+  btnEn.addEventListener('click', function () { apply('en'); });
+})();
+</script>
 
 </body>
 </html>
