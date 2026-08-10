@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>劣化調査アプリ — 図面にピン、写真で記録、報告書まで | NK-FIELD</title>
+<meta name="description" content="外壁・大規模修繕の劣化調査を iPhone / iPad で。図面にピンを打ち、現場写真とつなぎ、写真台帳・数量集計・増減精算表・PDF/Excel 報告書まで一気通貫。30日間無料お試し。">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  :root {
+    --blue: #1E88E5;
+    --blue-dark: #1565C0;
+    --blue-deep: #0D47A1;
+    --orange: #FF5722;
+    --ink: #1A2733;
+    --muted: #5B6B7B;
+    --paper: #F7FAFE;
+    --line: #D8E6F5;
+  }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Hiragino Sans", "Noto Sans JP", Meiryo, sans-serif;
+    color: var(--ink);
+    background: var(--paper);
+    line-height: 1.7;
+  }
+  .grid-bg {
+    background-image: linear-gradient(var(--line) 1px, transparent 1px),
+                      linear-gradient(90deg, var(--line) 1px, transparent 1px);
+    background-size: 36px 36px;
+  }
+  header {
+    background: linear-gradient(160deg, var(--blue) 0%, var(--blue-deep) 100%);
+    color: #fff;
+    padding: 56px 20px 48px;
+    text-align: center;
+  }
+  .icon {
+    width: 112px; height: 112px;
+    border-radius: 26px;
+    box-shadow: 0 10px 30px rgba(0,0,0,.28);
+    margin-bottom: 20px;
+  }
+  h1 { font-size: 32px; font-weight: 800; letter-spacing: .02em; }
+  .tagline { font-size: 16px; margin-top: 10px; opacity: .95; }
+  .badges { margin-top: 22px; font-size: 14px; }
+  .badge {
+    display: inline-block;
+    background: rgba(255,255,255,.16);
+    border: 1px solid rgba(255,255,255,.45);
+    border-radius: 999px;
+    padding: 6px 16px;
+    margin: 4px;
+  }
+  main { max-width: 880px; margin: 0 auto; padding: 40px 20px 24px; }
+  section { margin-bottom: 44px; }
+  h2 {
+    font-size: 22px;
+    color: var(--blue-dark);
+    border-left: 6px solid var(--blue);
+    padding-left: 12px;
+    margin-bottom: 20px;
+  }
+  .features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 14px;
+  }
+  .card {
+    background: #fff;
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    padding: 18px;
+    box-shadow: 0 3px 12px rgba(13,71,161,.06);
+  }
+  .card .em { font-size: 26px; line-height: 1; }
+  .card h3 { font-size: 16px; margin: 8px 0 6px; color: var(--blue-deep); }
+  .card p { font-size: 13.5px; color: var(--muted); }
+  .flow {
+    background: #fff;
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    padding: 20px 22px;
+  }
+  .flow ol { margin-left: 22px; }
+  .flow li { margin: 6px 0; }
+  .flow b { color: var(--blue-dark); }
+  .trial {
+    background: linear-gradient(135deg, #FFF3E0, #FFE0B2);
+    border: 1px solid #FFCC80;
+    border-radius: 14px;
+    padding: 20px 22px;
+  }
+  .trial b { color: #E65100; }
+  .note { font-size: 12.5px; color: var(--muted); margin-top: 8px; }
+  .cta {
+    display: inline-block;
+    background: var(--blue);
+    color: #fff;
+    text-decoration: none;
+    font-weight: 700;
+    border-radius: 12px;
+    padding: 14px 28px;
+    box-shadow: 0 6px 18px rgba(30,136,229,.35);
+  }
+  .cta:hover { background: var(--blue-dark); }
+  table.spec { width: 100%; border-collapse: collapse; background: #fff; border-radius: 14px; overflow: hidden; border: 1px solid var(--line); }
+  table.spec th, table.spec td { padding: 12px 16px; font-size: 14px; text-align: left; border-bottom: 1px solid var(--line); }
+  table.spec th { width: 34%; background: #EEF5FD; color: var(--blue-deep); font-weight: 600; }
+  table.spec tr:last-child th, table.spec tr:last-child td { border-bottom: none; }
+  footer {
+    text-align: center;
+    padding: 28px 16px 40px;
+    font-size: 13px;
+    color: var(--muted);
+    border-top: 1px solid var(--line);
+    background: #fff;
+  }
+  footer a { color: var(--blue-dark); }
+  @media (max-width: 480px) {
+    h1 { font-size: 26px; }
+    .tagline { font-size: 14px; }
+  }
+</style>
+</head>
+<body class="grid-bg">
+
+<header>
+  <img class="icon" src="icon.png" alt="劣化調査アプリ アイコン">
+  <h1>劣化調査アプリ</h1>
+  <p class="tagline">図面にピン、写真で記録、報告書まで一気通貫。<br>外壁・大規模修繕の現場調査を iPhone / iPad で。</p>
+  <div class="badges">
+    <span class="badge">iPhone / iPad 対応</span>
+    <span class="badge">30日間無料お試し</span>
+    <span class="badge">PDF / Excel 出力</span>
+  </div>
+</header>
+
+<main>
+  <section>
+    <h2>主な機能</h2>
+    <div class="features">
+      <div class="card"><div class="em">📐</div><h3>図面の取り込み</h3><p>PDF・画像・DXF の建物図面をそのまま取り込み。複数シート（立面図・平面図など）を 1 プロジェクトで管理できます。</p></div>
+      <div class="card"><div class="em">📍</div><h3>ピンで劣化を記録</h3><p>タイル浮き・ひび割れ・爆裂などの劣化箇所を図面上にピン留め。凡例ごとに自動採番され、位置と内容が一目で分かります。</p></div>
+      <div class="card"><div class="em">📷</div><h3>現場写真とひも付け</h3><p>撮影した写真がピン（指摘箇所）と自動でつながり、写真台帳をそのまま出力。「どの写真がどこの劣化か」を探す手間をなくします。</p></div>
+      <div class="card"><div class="em">🧮</div><h3>数量集計・増減精算表</h3><p>凡例別・階別・面別の数量を自動集計。当初数量との増減を比較する増減精算表（数量・金額）まで自動で作成します。</p></div>
+      <div class="card"><div class="em">🖨️</div><h3>PDF / Excel 報告書</h3><p>A3 図面レイアウトの印刷・PDF 出力、写真台帳、集計表の Excel 出力に対応。事務所に戻ってからの転記作業をゼロに。</p></div>
+      <div class="card"><div class="em">☁️</div><h3>クラウド同期</h3><p>対応プランでは調査データをクラウドに保存し、複数端末・組織内での共有やバックアップに対応します。</p></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>使い方はシンプル</h2>
+    <div class="flow">
+      <ol>
+        <li><b>図面を取り込む</b> — PDF や写真から調査対象の図面を登録</li>
+        <li><b>現地でピンを打つ</b> — 劣化箇所をタップして凡例・数量・写真を記録</li>
+        <li><b>そのまま出力</b> — 写真台帳・数量集計・増減精算表・図面 PDF をワンタップで作成</li>
+      </ol>
+    </div>
+  </section>
+
+  <section>
+    <h2>料金</h2>
+    <div class="trial">
+      <p><b>はじめの 30 日間は無料</b>でお試しいただけます。継続してご利用いただく場合は、アプリ内のプレミアムプラン（サブスクリプション）をご購入ください。</p>
+      <p class="note">価格・プラン内容はアプリ内の料金画面および App Store の表示をご確認ください。</p>
+    </div>
+  </section>
+
+  <section>
+    <h2>動作環境</h2>
+    <table class="spec">
+      <tr><th>対応端末</th><td>iPhone / iPad（App Store で配信）</td></tr>
+      <tr><th>開発・運営</th><td>NK-FIELD（Kohei Nishiguchi）</td></tr>
+      <tr><th>サポート</th><td><a href="https://docs.google.com/forms/d/e/1FAIpQLSfAHfIVb00BNQ286ZF1bdtMzlDWUJduS3hN_vc1tAi-J_bQ8g/viewform" target="_blank" rel="noopener">お問い合わせフォーム</a>（小規模・個人運営のため、返信まで目安 2 週間程度いただく場合があります）</td></tr>
+    </table>
+  </section>
+
+  <section style="text-align:center;">
+    <a class="cta" href="https://docs.google.com/forms/d/e/1FAIpQLSfAHfIVb00BNQ286ZF1bdtMzlDWUJduS3hN_vc1tAi-J_bQ8g/viewform" target="_blank" rel="noopener">お問い合わせはこちら</a>
+  </section>
+</main>
+
+<footer>
+  <p><a href="privacy.html">プライバシーポリシー</a> ｜ <a href="../index.html">NK-FIELD アプリ一覧</a></p>
+  <p style="margin-top:6px;">© NK-FIELD (Kohei Nishiguchi)</p>
+</footer>
+
+</body>
+</html>
