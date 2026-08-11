@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>安全日誌 | NK-FIELD</title>
+<meta name="robots" content="noindex">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  :root {
+    --blue: #1E88E5; --blue-dark: #1565C0; --blue-deep: #0D47A1;
+    --ink: #1A2733; --muted: #5B6B7B; --paper: #F7FAFE; --line: #D8E6F5;
+  }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Hiragino Sans", "Noto Sans JP", Meiryo, sans-serif;
+    color: var(--ink); background: var(--paper); line-height: 1.85;
+  }
+  header {
+    background: linear-gradient(160deg, var(--blue) 0%, var(--blue-deep) 100%);
+    color: #fff; padding: 34px 20px; text-align: center;
+  }
+  header h1 { font-size: 24px; font-weight: 800; }
+  header p { font-size: 13px; margin-top: 6px; opacity: .92; }
+  .langbar { display: flex; justify-content: center; gap: 8px; margin-bottom: 16px; }
+  .langbar button {
+    font: inherit; font-size: 13px; cursor: pointer;
+    background: rgba(255,255,255,.14); color: #fff;
+    border: 1px solid rgba(255,255,255,.5); border-radius: 999px;
+    padding: 5px 18px; transition: background .15s;
+  }
+  .langbar button:hover { background: rgba(255,255,255,.28); }
+  .langbar button[aria-pressed="true"] {
+    background: #fff; color: var(--blue-deep); font-weight: 700; border-color: #fff;
+  }
+  main { max-width: 820px; margin: 0 auto; padding: 34px 20px 40px; }
+  article {
+    background: #fff; border: 1px solid var(--line); border-radius: 14px;
+    padding: 20px 24px; margin-bottom: 16px;
+    box-shadow: 0 3px 12px rgba(13,71,161,.05);
+  }
+  article.important { border-left: 6px solid var(--blue); }
+  h2 { font-size: 17px; color: var(--blue-deep); margin-bottom: 10px; }
+  pre {
+    white-space: pre-wrap; word-break: break-word;
+    font-family: inherit; font-size: 14.5px;
+  }
+  a { color: var(--blue-dark); word-break: break-all; }
+  footer {
+    text-align: center; padding: 24px 16px 40px; font-size: 13px;
+    color: var(--muted); border-top: 1px solid var(--line); background: #fff;
+  }
+  footer a { color: var(--blue-dark); }
+  [hidden] { display: none !important; }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="langbar">
+    <button type="button" id="btn-ja" aria-pressed="true">日本語</button>
+    <button type="button" id="btn-en" aria-pressed="false">English</button>
+  </div>
+  <h1 data-ja="安全日誌" data-en="Safety Diary">安全日誌</h1>
+  <p data-ja="建設現場の安全日誌をiPhone・iPadで — NK-FIELD" data-en="Site safety diary for iPhone and iPad - NK-FIELD">建設現場の安全日誌をiPhone・iPadで — NK-FIELD</p>
+</header>
+
+<!-- ===================== 日本語 ===================== -->
+<main id="lang-ja">
+  <article>
+    <h2>紙の帳票そのままの入力</h2>
+    <pre>作業打合せ・指示書／安全衛生点検／稼働・環境／足場・公衆災害防止／現場責任者／稼働人員／確認・承認の 7 区分を、紙の様式と同じ並びで入力できます。</pre>
+  </article>
+
+  <article>
+    <h2>入力を覚えて次回から呼び出し</h2>
+    <pre>会社名・職長名は物件ごとに記憶され、次回から候補として表示されます。職種を選ぶと前回の会社名が自動で入り、不要になった業者は一覧から削除できます。</pre>
+  </article>
+
+  <article>
+    <h2>安全指示事項のマスター登録</h2>
+    <pre>工種・作業ごとに定型の安全指示事項を登録しておき、リストから選んでその場で編集できます。</pre>
+  </article>
+
+  <article>
+    <h2>PDF / Excel 出力と朝礼表示</h2>
+    <pre>紙と同じレイアウトの PDF・Excel を出力できます。朝礼では画面を見せながら読み上げられる表示モードを利用できます。</pre>
+  </article>
+
+  <article>
+    <h2>すべて端末内で完結</h2>
+    <pre>入力したデータは端末内にのみ保存されます。アカウント登録は不要で、通信・広告・利用状況の収集は一切ありません。</pre>
+  </article>
+
+  <article class="important">
+    <h2>お問い合わせ</h2>
+    <pre>ご質問・不具合のご報告は、以下のフォームよりお寄せください。
+<a href="https://forms.gle/2r84AJXZMPDaVMsd6">https://forms.gle/2r84AJXZMPDaVMsd6</a></pre>
+  </article>
+
+  <article>
+    <h2>関連情報</h2>
+    <pre><a href="privacy.html">プライバシーポリシー</a>
+利用規約・特定商取引法に基づく表記・サポート方針は、アプリ内の「法的情報」からご確認いただけます。</pre>
+  </article>
+</main>
+
+<!-- ===================== English ===================== -->
+<main id="lang-en" hidden>
+  <article>
+    <h2>Faithful to the paper form</h2>
+    <pre>Enter all seven sections - work briefing and instructions, safety inspection, operations and environment, scaffolding and public safety, site manager notes, manpower, and approvals - in the same order as the paper form.</pre>
+  </article>
+
+  <article>
+    <h2>Remembers your entries</h2>
+    <pre>Company and foreman names are remembered per site and offered as suggestions. Selecting a trade fills in the company you used last time, and entries you no longer need can be deleted from the list.</pre>
+  </article>
+
+  <article>
+    <h2>Safety instruction master</h2>
+    <pre>Register standard safety instructions per trade or task, then pick one from the list and edit it in place.</pre>
+  </article>
+
+  <article>
+    <h2>PDF / Excel export and briefing mode</h2>
+    <pre>Export PDF and Excel files laid out like the paper form. A briefing mode lets you show the screen while reading items aloud at the morning meeting.</pre>
+  </article>
+
+  <article>
+    <h2>Everything stays on your device</h2>
+    <pre>Your entries are stored only on your device. No account is required, and there is no network transmission, advertising, or usage tracking.</pre>
+  </article>
+
+  <article class="important">
+    <h2>Contact</h2>
+    <pre>For questions or bug reports, please use the form below.
+<a href="https://forms.gle/2r84AJXZMPDaVMsd6">https://forms.gle/2r84AJXZMPDaVMsd6</a></pre>
+  </article>
+
+  <article>
+    <h2>Related information</h2>
+    <pre><a href="privacy.html">Privacy Policy</a>
+The Terms of Service, the notice under the Act on Specified Commercial Transactions, and the support policy are available from "Legal information" inside the app.</pre>
+  </article>
+</main>
+
+<footer>
+  <p><a href="../index.html" data-ja="NK-FIELD トップへ戻る" data-en="Back to NK-FIELD home">NK-FIELD トップへ戻る</a></p>
+  <p style="margin-top:6px;">&copy; NK-FIELD (Kohei Nishiguchi)</p>
+</footer>
+
+<script>
+/* 言語切替: ブラウザの言語設定を自動判定し、手動切替も可能にする。
+   URL は変えない (App Store Connect に登録済みの URL をそのまま使うため)。 */
+(function () {
+  var paneJa = document.getElementById('lang-ja');
+  var paneEn = document.getElementById('lang-en');
+  var btnJa = document.getElementById('btn-ja');
+  var btnEn = document.getElementById('btn-en');
+
+  function apply(lang) {
+    var ja = (lang === 'ja');
+    paneJa.hidden = !ja;
+    paneEn.hidden = ja;
+    btnJa.setAttribute('aria-pressed', ja ? 'true' : 'false');
+    btnEn.setAttribute('aria-pressed', ja ? 'false' : 'true');
+    document.documentElement.lang = ja ? 'ja' : 'en';
+    var nodes = document.querySelectorAll('[data-ja][data-en]');
+    for (var i = 0; i < nodes.length; i++) {
+      nodes[i].textContent = nodes[i].getAttribute(ja ? 'data-ja' : 'data-en');
+    }
+    try { localStorage.setItem('nkfield-safetydiary-lang', ja ? 'ja' : 'en'); } catch (e) {}
+  }
+
+  var initial = null;
+  var q = location.search.match(/[?&]lang=(ja|en)/);
+  if (q) { initial = q[1]; }
+  if (!initial) {
+    try { initial = localStorage.getItem('nkfield-safetydiary-lang'); } catch (e) {}
+  }
+  if (initial !== 'ja' && initial !== 'en') {
+    var nav = (navigator.language || 'ja').toLowerCase();
+    initial = nav.indexOf('ja') === 0 ? 'ja' : 'en';
+  }
+  apply(initial);
+
+  btnJa.addEventListener('click', function () { apply('ja'); });
+  btnEn.addEventListener('click', function () { apply('en'); });
+})();
+</script>
+
+</body>
+</html>
