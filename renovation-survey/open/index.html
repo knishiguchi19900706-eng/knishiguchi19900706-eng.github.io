@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex">
+<title>現場コード | 劣化調査アプリ</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  :root { --blue: #1E88E5; --blue-dark: #1565C0; --blue-deep: #0D47A1; --ink: #1A2733; --muted: #5B6B7B; --paper: #F7FAFE; --line: #D8E6F5; }
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Hiragino Sans", "Noto Sans JP", Meiryo, sans-serif; color: var(--ink); background: var(--paper); line-height: 1.7; }
+  header { background: linear-gradient(160deg, var(--blue) 0%, var(--blue-deep) 100%); color: #fff; padding: 28px 20px 24px; text-align: center; }
+  header h1 { font-size: 22px; font-weight: 800; }
+  header p { font-size: 14px; opacity: .95; margin-top: 4px; }
+  main { max-width: 560px; margin: 0 auto; padding: 24px 20px 40px; }
+  .code-box { background: #fff; border: 1px solid var(--line); border-radius: 16px; padding: 22px 18px; text-align: center; box-shadow: 0 3px 12px rgba(13,71,161,.06); }
+  .label { font-size: 14px; color: var(--muted); }
+  .code { font-size: 44px; font-weight: 800; letter-spacing: .22em; color: var(--blue-deep); margin: 6px 0 10px; font-variant-numeric: tabular-nums; word-break: break-all; }
+  .code.none { font-size: 18px; letter-spacing: 0; color: var(--muted); font-weight: 600; }
+  .copy { display: inline-block; background: var(--blue); color: #fff; border: 0; border-radius: 12px; padding: 12px 22px; font-size: 16px; font-weight: 700; cursor: pointer; box-shadow: 0 6px 18px rgba(30,136,229,.3); }
+  .copy:active { background: var(--blue-dark); }
+  .copied { font-size: 13px; color: var(--blue-dark); margin-top: 8px; min-height: 1.4em; }
+  .steps { background: #fff; border: 1px solid var(--line); border-radius: 16px; padding: 18px 20px; margin-top: 18px; }
+  .steps h2 { font-size: 16px; color: var(--blue-dark); margin-bottom: 8px; }
+  .steps ol { margin-left: 22px; font-size: 15px; }
+  .steps li { margin: 6px 0; }
+  .steps b { color: var(--blue-dark); }
+  .note { font-size: 12.5px; color: var(--muted); margin-top: 14px; }
+  footer { text-align: center; padding: 20px 16px 32px; font-size: 13px; color: var(--muted); }
+  footer a { color: var(--blue-dark); }
+</style>
+</head>
+<body>
+<header>
+  <h1>劣化調査アプリ — 現場コード</h1>
+  <p>職人さん向け。ログインは要りません。</p>
+</header>
+<main>
+  <div class="code-box">
+    <div class="label">現場コード</div>
+    <div id="code" class="code none">コードが見つかりません</div>
+    <button id="copy" class="copy" type="button" hidden>コードをコピー</button>
+    <div id="copied" class="copied"></div>
+  </div>
+
+  <div class="steps">
+    <h2>使い方（3 ステップ）</h2>
+    <ol>
+      <li><b>アプリを開く</b>（まだの方は App Store で「劣化調査アプリ」を検索して入れてください）</li>
+      <li>最初の画面で <b>「現場で入力する」</b> を押す</li>
+      <li>上の <b>現場コード</b> を入れる（または担当者の QR コードを読み取る）</li>
+    </ol>
+    <p class="note">コードには有効期限があります。使えないときは現場の担当者に確認してください。</p>
+  </div>
+</main>
+<footer>
+  <p><a href="../index.html">劣化調査アプリについて</a> ｜ <a href="../privacy.html">プライバシーポリシー</a></p>
+  <p style="margin-top:6px;">© NK-FIELD (Kohei Nishiguchi)</p>
+</footer>
+<script>
+  (function () {
+    var params = new URLSearchParams(location.search);
+    var raw = (params.get('code') || '').toUpperCase().replace(/[^A-Z0-9]/g, '');
+    var el = document.getElementById('code');
+    var btn = document.getElementById('copy');
+    var msg = document.getElementById('copied');
+    if (raw.length === 6) {
+      el.textContent = raw;
+      el.classList.remove('none');
+      btn.hidden = false;
+      btn.addEventListener('click', function () {
+        function done() { msg.textContent = 'コピーしました'; }
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+          navigator.clipboard.writeText(raw).then(done, function () { msg.textContent = raw; });
+        } else {
+          msg.textContent = raw;
+        }
+      });
+    }
+  })();
+</script>
+</body>
+</html>
