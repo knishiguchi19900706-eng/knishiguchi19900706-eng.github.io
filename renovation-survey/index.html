@@ -103,6 +103,23 @@
     box-shadow: 0 6px 18px rgba(30,136,229,.35);
   }
   .cta:hover { background: var(--blue-dark); }
+  .cta.light { background: #fff; color: var(--blue-deep); box-shadow: 0 6px 18px rgba(0,0,0,.18); margin-top: 22px; }
+  .cta.light:hover { background: #EEF5FD; }
+  /* 図面を受け取った方・職人さん向け (印刷した図面の QR の行き先 #worker) */
+  .worker {
+    background: #fff;
+    border: 2px solid var(--orange);
+    border-radius: 16px;
+    padding: 22px;
+    scroll-margin-top: 16px;
+  }
+  .worker h2 { color: #BF360C; border-left-color: var(--orange); }
+  .worker .lead { font-size: 16px; font-weight: 700; margin-bottom: 12px; }
+  .worker .ways { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 12px; margin: 14px 0; }
+  .worker .way { background: var(--paper); border: 1px solid var(--line); border-radius: 12px; padding: 14px 16px; }
+  .worker .way h3 { font-size: 15px; color: var(--blue-deep); margin-bottom: 4px; }
+  .worker .way p { font-size: 13.5px; color: var(--muted); }
+  .worker .office { font-size: 14px; background: #FFF3E0; border-radius: 10px; padding: 12px 14px; }
   table.spec { width: 100%; border-collapse: collapse; background: #fff; border-radius: 14px; overflow: hidden; border: 1px solid var(--line); }
   table.spec th, table.spec td { padding: 12px 16px; font-size: 14px; text-align: left; border-bottom: 1px solid var(--line); }
   table.spec th { width: 34%; background: #EEF5FD; color: var(--blue-deep); font-weight: 600; }
@@ -133,6 +150,7 @@
     <span class="badge">30日間無料お試し</span>
     <span class="badge">PDF / Excel 出力</span>
   </div>
+  <a class="cta light" href="https://apps.apple.com/jp/app/id6769016983" target="_blank" rel="noopener">App Store で入手</a>
 </header>
 
 <main>
@@ -159,6 +177,19 @@
     </div>
   </section>
 
+  <section id="worker" class="worker">
+    <h2>図面を受け取った方・職人さんへ</h2>
+    <p class="lead">職人モードは無料。アカウント登録もいりません。</p>
+    <p>この図面は、劣化調査アプリの「職人モード」で作られました。スマホに入れて、次のどちらかで使えます。</p>
+    <div class="ways">
+      <div class="way"><h3>① 自分で調査する</h3><p>現場名を入れて図面（PDF・写真）を取り込むだけで始められます。ピンと写真を置いたら「事務所に渡す」で受け渡しコードを送れます。</p></div>
+      <div class="way"><h3>② 現場コードで参加する</h3><p>事務所から届いた現場コード（または QR）を入れると、その現場の図面にピンと写真を送れます。</p></div>
+    </div>
+    <p class="office"><b>事務所・元請けの方へ：</b>受け渡しコードを入れると、職人さんの調査がそのまま図面のプロジェクトになります。写真台帳・数量集計・報告書の出力は事務所版（はじめの 30 日間は無料）で行えます。</p>
+    <p style="text-align:center; margin-top:16px;"><a class="cta" href="https://apps.apple.com/jp/app/id6769016983" target="_blank" rel="noopener">App Store で入手（無料）</a></p>
+    <p class="note" style="text-align:center;">「職人モード」「自分で調査する」は最新版のアプリでお使いいただけます。</p>
+  </section>
+
   <section>
     <h2>料金</h2>
     <div class="trial">
@@ -177,7 +208,8 @@
   </section>
 
   <section style="text-align:center;">
-    <a class="cta" href="https://docs.google.com/forms/d/e/1FAIpQLSfAHfIVb00BNQ286ZF1bdtMzlDWUJduS3hN_vc1tAi-J_bQ8g/viewform" target="_blank" rel="noopener">お問い合わせはこちら</a>
+    <a class="cta" href="https://apps.apple.com/jp/app/id6769016983" target="_blank" rel="noopener" style="margin:6px;">App Store で入手</a>
+    <a class="cta" style="margin:6px; background:#fff; color:var(--blue-deep);" href="https://docs.google.com/forms/d/e/1FAIpQLSfAHfIVb00BNQ286ZF1bdtMzlDWUJduS3hN_vc1tAi-J_bQ8g/viewform" target="_blank" rel="noopener">お問い合わせはこちら</a>
   </section>
 </main>
 
