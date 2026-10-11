@@ -87,7 +87,7 @@
 - メールで登録した場合のパスワード（Firebase Authentication が管理し、当事業者は見ることができません）
 - Google または Apple でログインした場合に各社から受け取るメールアドレス（Apple で「メールを非公開」を選んだ場合は、Apple が発行する転送用のアドレス）
 - パスワードの再設定の案内のため、メールアドレスから計算した値（ハッシュ値）とログインの方法の対応（メールアドレスそのものは、この対応には保存しません）
-- 端末どうしで課題をそろえるため、課題の内容の写し（課題・図面・手順の確認などの記録。課題文の写真は含みません）と、その一覧（課題名・更新日時・削除の印）。上に記載の「端末外に出ることはありません」の例外として、ログインして同期を使う場合に限り、Cloud Storage for Firebase と Cloud Firestore に保存します
+- 端末どうしで課題をそろえるため、課題の内容の写し（課題・図面・手順の確認などの記録。課題文の写真は含みません）と、その一覧（課題名・更新日時・削除の印）、および学習の記録（レッスンの成績・過去問の最高点・チェッカーの履歴・自分で作った問題）。上に記載の「端末外に出ることはありません」の例外として、ログインして同期を使う場合に限り、Cloud Storage for Firebase と Cloud Firestore に保存します
 
 ログインした場合、購入状況の確認のため RevenueCat に送る利用者 ID は、上記の Firebase の利用者 ID になります（メールアドレスは送信しません）。</div>
   </article>
@@ -104,7 +104,7 @@
 
 - ログインと、ご本人の確認
 - 端末をまたいだ購入状況の引き継ぎ
-- 同じアカウントの端末どうしでの課題の同期
+- 同じアカウントの端末どうしでの課題と学習の記録の同期
 - パスワードの再設定の案内
 - アカウントに関するお問い合わせへの対応、不正利用の防止</div>
   </article>
@@ -207,7 +207,7 @@ Signing in is optional. Every feature of the app works without signing in. Only 
 - Your password, if you registered with email (managed by Firebase Authentication; the Operator cannot see it)
 - The email address received from Google or Apple when you sign in with them (if you choose "Hide My Email" with Apple, the relay address issued by Apple)
 - To guide you when you reset your password, a value calculated from your email address (a hash) paired with how you signed in (the email address itself is not stored in this pairing)
-- To keep your briefs in step between your devices, a copy of your brief contents (briefs, drawings, step checks and similar records; photos of the brief are not included) and their list (title, update time and deletion marks). As an exception to "never leaves your device" above, this is stored in Cloud Storage for Firebase and Cloud Firestore only when you sign in and use sync
+- To keep your briefs in step between your devices, a copy of your brief contents (briefs, drawings, step checks and similar records; photos of the brief are not included), their list (title, update time and deletion marks), and your learning records (lesson results, best past-exam scores, checker history and your own problems). As an exception to "never leaves your device" above, this is stored in Cloud Storage for Firebase and Cloud Firestore only when you sign in and use sync
 
 When you are signed in, the user ID sent to RevenueCat to check purchase status is the Firebase user ID above (your email address is not sent).</div>
   </article>
@@ -224,7 +224,7 @@ Sign-in information (optional) is used only for the following purposes. It is no
 
 - Signing in and confirming your identity
 - Carrying your purchase status over between your devices
-- Syncing your briefs between devices signed in to the same account
+- Syncing your briefs and learning records between devices signed in to the same account
 - Guiding you when you reset your password
 - Responding to account inquiries and preventing misuse</div>
   </article>
