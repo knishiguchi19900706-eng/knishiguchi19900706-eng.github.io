@@ -45,7 +45,7 @@
     <button type="button" id="btn-en" aria-pressed="false">English</button>
   </div>
   <h1 data-ja="エスキスマスター プライバシーポリシー" data-en="Esquisse Master — Privacy Policy">エスキスマスター プライバシーポリシー</h1>
-  <p data-ja="最終更新日: 2026-10-02 ／ 運営者: NK-FIELD" data-en="Last updated: 2026-10-02 / Operator: NK-FIELD">最終更新日: 2026-10-02 ／ 運営者: NK-FIELD</p>
+  <p data-ja="最終更新日: 2026-10-11 ／ 運営者: NK-FIELD" data-en="Last updated: 2026-10-11 / Operator: NK-FIELD">最終更新日: 2026-10-11 ／ 運営者: NK-FIELD</p>
   <nav>
     <a href="index.html" data-ja="トップ" data-en="Home">トップ</a>
     <a href="privacy.html" data-ja="プライバシーポリシー" data-en="Privacy">プライバシーポリシー</a>
@@ -78,7 +78,18 @@
 
 【定期購読の購入で処理される情報】
 - 購入の手続きと代金の決済は、Apple（App Store）または Google（Google Play）が行います。当事業者はクレジットカード番号等の決済情報を取得しません。
-- 利用できる機能を判定するため（どのプランを利用中か・無料体験中か・有効期限）、購入管理サービス RevenueCat（RevenueCat, Inc.、米国）に、本アプリが自動で作る匿名の利用者 ID と、ストアの購入記録を送信します。氏名・メールアドレス・端末内のデータは送信しません。</div>
+- 利用できる機能を判定するため（どのプランを利用中か・無料体験中か・有効期限）、購入管理サービス RevenueCat（RevenueCat, Inc.、米国）に、本アプリが自動で作る匿名の利用者 ID と、ストアの購入記録を送信します。氏名・メールアドレス・端末内のデータは送信しません。
+
+【端末間の共有のためのログイン（任意）】
+ログインは任意です。ログインしなくても、本アプリのすべての機能を利用できます。自分の端末どうし（スマートフォン・タブレット・PC）で同じ課題を使うために、お客様がログインを選んだ場合に限り、次の情報を Google LLC の Firebase（Firebase Authentication・Cloud Firestore）で処理します。
+- メールアドレスと、ログインの方法（メール・Google・Apple）
+- Firebase が発行する利用者 ID（英数字の識別子）
+- メールで登録した場合のパスワード（Firebase Authentication が管理し、当事業者は見ることができません）
+- Google または Apple でログインした場合に各社から受け取るメールアドレス（Apple で「メールを非公開」を選んだ場合は、Apple が発行する転送用のアドレス）
+- パスワードの再設定の案内のため、メールアドレスから計算した値（ハッシュ値）とログインの方法の対応（メールアドレスそのものは、この対応には保存しません）
+- 端末どうしで課題をそろえるため、課題の内容の写し（課題・図面・手順の確認などの記録。課題文の写真は含みません）と、その一覧（課題名・更新日時・削除の印）。上に記載の「端末外に出ることはありません」の例外として、ログインして同期を使う場合に限り、Cloud Storage for Firebase と Cloud Firestore に保存します
+
+ログインした場合、購入状況の確認のため RevenueCat に送る利用者 ID は、上記の Firebase の利用者 ID になります（メールアドレスは送信しません）。</div>
   </article>
   <article>
     <h2>3. 利用目的</h2>
@@ -87,7 +98,15 @@
 - 利用できる機能の判定（プランの確認・無料体験の確認）
 - 購入に関するお問い合わせへの対応、不正利用の防止
 
-端末内のデータは、本アプリの機能を提供するためにのみ、お客様の端末内で処理されます。</div>
+端末内のデータは、本アプリの機能を提供するためにのみ、お客様の端末内で処理されます。
+
+ログインの情報（任意）は、次の目的にのみ利用します。分析・広告・販売には利用しません。
+
+- ログインと、ご本人の確認
+- 端末をまたいだ購入状況の引き継ぎ
+- 同じアカウントの端末どうしでの課題の同期
+- パスワードの再設定の案内
+- アカウントに関するお問い合わせへの対応、不正利用の防止</div>
   </article>
   <article>
     <h2>4. 第三者提供</h2>
@@ -97,16 +116,22 @@
 - 法令に基づく場合
 
 - 購入状況の確認を委託する場合（委託先: RevenueCat, Inc.）
-- 購入の手続きと決済（Apple Inc. / Google LLC。各社のプライバシーポリシーが適用されます）</div>
+- 購入の手続きと決済（Apple Inc. / Google LLC。各社のプライバシーポリシーが適用されます）
+
+- ログインの情報の管理を委託する場合（委託先: Google LLC の Firebase）
+- Google または Apple でログインする場合の認証（Google LLC / Apple Inc.。各社のプライバシーポリシーが適用されます）</div>
   </article>
   <article>
     <h2>5. 外国にある第三者への提供</h2>
-<div class="text">購入状況の確認に RevenueCat, Inc.（米国）を利用するため、匿名の利用者 ID と購入記録が米国で処理されます。同社は、同社のプライバシーポリシーおよびデータ処理規約に基づく安全管理措置を講じています。米国の個人情報保護制度については、個人情報保護委員会が公表している情報をご参照ください。</div>
+<div class="text">購入状況の確認に RevenueCat, Inc.（米国）を利用するため、匿名の利用者 ID と購入記録が米国で処理されます。同社は、同社のプライバシーポリシーおよびデータ処理規約に基づく安全管理措置を講じています。米国の個人情報保護制度については、個人情報保護委員会が公表している情報をご参照ください。
+
+ログイン（任意）の情報は、Google LLC（米国）の Firebase で処理されます。利用者の記録と課題の写しは日本国内（東京リージョン）に保存しますが、ログインの処理（Firebase Authentication）は米国その他の国で行われる場合があります。同社は、同社のデータ処理規約に基づく安全管理措置を講じています。米国の個人情報保護制度については、個人情報保護委員会が公表している情報をご参照ください。</div>
   </article>
   <article>
     <h2>6. 安全管理</h2>
 <div class="text">- 購入状況の確認の通信は HTTPS で暗号化します。
 - 当事業者は決済情報を取得・保管しません。
+- ログインの通信は HTTPS で暗号化します。利用者の記録は、ご本人だけが読み書きできる設定にしています。
 - 端末内のデータは、OS が提供するアプリ間のデータ分離（サンドボックス）により他のアプリから保護されます。
 - 端末の紛失・盗難に備え、画面ロック（パスコード・生体認証）の設定を推奨します。
 - アプリを削除すると端末内のデータも削除されます。必要なデータは PDF・バックアップファイル として出力し保管してください。</div>
@@ -114,13 +139,16 @@
   <article>
     <h2>7. 保有期間</h2>
 <div class="text">- 購入状況の記録は、RevenueCat, Inc. のサービス上で、定期購読の管理に必要な期間保存されます。
+- ログイン（任意）の情報と課題の写しは、アカウントを削除するまで保存します。アプリ内の「アカウントを削除」で、利用者の記録・ログインの情報・クラウドの課題の写しを削除します。端末で課題を消すと、クラウドの写しも削除されます（消したことを他の端末に伝える印だけが残ります）。
 - 端末内のデータは、お客様が削除するかアプリをアンインストールするまで端末内に保存されます。保存期間はお客様の管理下にあります。</div>
   </article>
   <article>
     <h2>8. ユーザーの権利</h2>
 <div class="text">- 定期購読の変更・解約は、App Store（または Google Play）のアカウント設定からいつでも行えます。
 - 購入状況の記録の開示・削除等を希望される場合は、お問い合わせフォームからご連絡ください。
-- 端末内のデータは、アプリ内の削除機能またはアプリのアンインストールにより、お客様ご自身でいつでも削除できます。</div>
+- 端末内のデータは、アプリ内の削除機能またはアプリのアンインストールにより、お客様ご自身でいつでも削除できます。
+
+- ログイン（任意）のアカウントは、アプリ内の「アカウントと端末間の共有」の画面からいつでも削除できます。削除しても、端末内のデータは残ります。</div>
   </article>
   <article>
     <h2>9. お子様のプライバシー</h2>
@@ -143,7 +171,7 @@
     <h2>12. ポリシーの変更</h2>
 <div class="text">本ポリシーは法令改正や運営方針の変更に伴い、予告なく改定する場合があります。重要な変更がある場合はアプリ内でお知らせします。
 
-最終改定日：2026-10-02</div>
+最終改定日：2026-10-11</div>
   </article>
 </main>
 
@@ -170,7 +198,18 @@ This data never leaves your device except when you export it as PDF or a backup 
 
 [Information processed for subscription purchases]
 - Purchases and payments are handled by Apple (App Store) or Google (Google Play). The Operator does not collect payment information such as credit card numbers.
-- To determine which features you can use (your plan, whether you are in a free trial, and the expiry date), the app sends an anonymous user ID that it creates automatically and the store purchase records to the purchase-management service RevenueCat (RevenueCat, Inc., United States). No name, email address, or data on your device is sent.</div>
+- To determine which features you can use (your plan, whether you are in a free trial, and the expiry date), the app sends an anonymous user ID that it creates automatically and the store purchase records to the purchase-management service RevenueCat (RevenueCat, Inc., United States). No name, email address, or data on your device is sent.
+
+[Optional sign-in for sharing between your devices]
+Signing in is optional. Every feature of the app works without signing in. Only if you choose to sign in, so that you can use the same work on your own devices (smartphone, tablet and PC), the following information is processed by Firebase (Firebase Authentication and Cloud Firestore) of Google LLC.
+- Your email address and how you signed in (email, Google or Apple)
+- A user ID issued by Firebase (an alphanumeric identifier)
+- Your password, if you registered with email (managed by Firebase Authentication; the Operator cannot see it)
+- The email address received from Google or Apple when you sign in with them (if you choose "Hide My Email" with Apple, the relay address issued by Apple)
+- To guide you when you reset your password, a value calculated from your email address (a hash) paired with how you signed in (the email address itself is not stored in this pairing)
+- To keep your briefs in step between your devices, a copy of your brief contents (briefs, drawings, step checks and similar records; photos of the brief are not included) and their list (title, update time and deletion marks). As an exception to "never leaves your device" above, this is stored in Cloud Storage for Firebase and Cloud Firestore only when you sign in and use sync
+
+When you are signed in, the user ID sent to RevenueCat to check purchase status is the Firebase user ID above (your email address is not sent).</div>
   </article>
   <article>
     <h2>3. Purposes of Use</h2>
@@ -179,7 +218,15 @@ This data never leaves your device except when you export it as PDF or a backup 
 - Determining which features you can use (checking your plan and free trial)
 - Responding to purchase inquiries and preventing misuse
 
-Data on your device is processed solely on that device in order to provide the app's features.</div>
+Data on your device is processed solely on that device in order to provide the app's features.
+
+Sign-in information (optional) is used only for the following purposes. It is not used for analytics, advertising, or sale.
+
+- Signing in and confirming your identity
+- Carrying your purchase status over between your devices
+- Syncing your briefs between devices signed in to the same account
+- Guiding you when you reset your password
+- Responding to account inquiries and preventing misuse</div>
   </article>
   <article>
     <h2>4. Provision to Third Parties</h2>
@@ -189,16 +236,22 @@ Data on your device is processed solely on that device in order to provide the a
 - When required by law
 
 - When checking purchase status is outsourced (provider: RevenueCat, Inc.)
-- Purchase processing and payment (Apple Inc. / Google LLC; their privacy policies apply)</div>
+- Purchase processing and payment (Apple Inc. / Google LLC; their privacy policies apply)
+
+- When the management of sign-in information is entrusted to Google LLC (Firebase)
+- Authentication when you sign in with Google or Apple (Google LLC / Apple Inc.; their privacy policies apply)</div>
   </article>
   <article>
     <h2>5. Provision to Third Parties Located Overseas</h2>
-<div class="text">Because the app uses RevenueCat, Inc. (United States) to check purchase status, the anonymous user ID and purchase records are processed in the United States. The company takes security measures under its privacy policy and data processing terms. For information on the personal-information protection system in the United States, please refer to the information published by the Personal Information Protection Commission of Japan.</div>
+<div class="text">Because the app uses RevenueCat, Inc. (United States) to check purchase status, the anonymous user ID and purchase records are processed in the United States. The company takes security measures under its privacy policy and data processing terms. For information on the personal-information protection system in the United States, please refer to the information published by the Personal Information Protection Commission of Japan.
+
+Sign-in information (optional) is processed by Firebase of Google LLC (United States). The user record and the copies of your briefs are stored in Japan (Tokyo region), but sign-in processing (Firebase Authentication) may take place in the United States and other countries. The company takes security measures under its data processing terms. For information on the personal-information protection system in the United States, please refer to the information published by the Personal Information Protection Commission of Japan.</div>
   </article>
   <article>
     <h2>6. Security Management</h2>
 <div class="text">- Communication for checking purchase status is encrypted with HTTPS.
 - The Operator neither collects nor stores payment information.
+- Sign-in communication is encrypted with HTTPS. The user record is set so that only you can read and write it.
 - Data on the device is protected from other apps by the data isolation (sandbox) provided by the operating system.
 - We recommend enabling a screen lock (passcode or biometrics) in case the device is lost or stolen.
 - Deleting the app also deletes the data stored on the device. Please export any data you need as PDF or a backup file and retain it separately.</div>
@@ -206,13 +259,16 @@ Data on your device is processed solely on that device in order to provide the a
   <article>
     <h2>7. Retention Period</h2>
 <div class="text">- Purchase status records are kept on the RevenueCat, Inc. service for as long as needed to manage the subscription.
+- Sign-in information (optional) and the copies of your briefs are kept until you delete your account. "Delete account" in the app deletes the user record, the sign-in information and the copies of your briefs in the cloud. When you delete a brief on a device, its cloud copy is deleted too (only a mark telling your other devices that it was deleted remains).
 - Data on your device remains there until you delete it or uninstall the app. The retention period is under your control.</div>
   </article>
   <article>
     <h2>8. User Rights</h2>
 <div class="text">- You can change or cancel your subscription at any time in your App Store (or Google Play) account settings.
 - If you wish to request disclosure, deletion, etc. of purchase status records, please contact us via the inquiry form.
-- You can delete the data on your device yourself at any time, using the deletion features in the app or by uninstalling the app.</div>
+- You can delete the data on your device yourself at any time, using the deletion features in the app or by uninstalling the app.
+
+- You can delete your optional account at any time from the "Account &amp; device sharing" screen in the app. Data on your device remains after deletion.</div>
   </article>
   <article>
     <h2>9. Children's Privacy</h2>
@@ -235,7 +291,7 @@ Inquiry form: <a href="https://forms.gle/2r84AJXZMPDaVMsd6">https://forms.gle/2r
     <h2>12. Changes to This Policy</h2>
 <div class="text">This Policy may be revised without notice in response to legal amendments or changes in operating policy. We will notify you within the app of any significant changes.
 
-Last updated: 2026-10-02</div>
+Last updated: 2026-10-11</div>
   </article>
 </main>
 
