@@ -1,0 +1,59 @@
+{
+  "schema": 1,
+  "updatedAt": "2026-10-30",
+  "developer": {
+    "appStoreDeveloperId": "1877488221",
+    "siteUrl": "https://knishiguchi19900706-eng.github.io/"
+  },
+  "campaign": {
+    "appStoreProviderToken": ""
+  },
+  "apps": [
+    {
+      "token": "renovationsurvey",
+      "status": "published",
+      "category": "business",
+      "order": 10,
+      "ageRating": 4,
+      "name": { "en": "Renovation Survey", "ja": "劣化調査アプリ" },
+      "tagline": { "en": "Mark defects on drawings and export reports", "ja": "図面に劣化を記録して、報告書まで" },
+      "icon": "https://knishiguchi19900706-eng.github.io/renovation-survey/icon.png",
+      "ios": { "appStoreId": "6769016983" },
+      "web": { "url": "https://knishiguchi19900706-eng.github.io/renovation-survey/" }
+    },
+    {
+      "token": "kenuki",
+      "status": "published",
+      "category": "game",
+      "order": 10,
+      "ageRating": 4,
+      "name": { "en": "Pluck & Plant", "ja": "こっそり毛抜き" },
+      "tagline": { "en": "Pluck, grow and replant - a quirky idle game", "ja": "毛を抜いて、育てて、植え替える育成ゲーム" },
+      "icon": "https://knishiguchi19900706-eng.github.io/apps/icons/kenuki.png",
+      "ios": { "appStoreId": "6759218323" }
+    },
+    {
+      "token": "crashglass",
+      "status": "published",
+      "category": "game",
+      "order": 20,
+      "ageRating": 4,
+      "name": { "en": "Crash Glass", "ja": "ガラスクラッシュ" },
+      "tagline": { "en": "Tap to shatter glass - pure ASMR relief", "ja": "タップでガラスが砕ける ASMR ゲーム" },
+      "icon": "https://knishiguchi19900706-eng.github.io/apps/icons/crashglass.png",
+      "ios": { "appStoreId": "6766061052" }
+    },
+    {
+      "token": "duoreversi",
+      "status": "published",
+      "category": "game",
+      "order": 30,
+      "ageRating": 4,
+      "name": { "en": "Duo Reversi", "ja": "デュオ・リバーシ" },
+      "tagline": { "en": "Reversi played with two-cell pieces", "ja": "2 マスの駒で遊ぶ新しいリバーシ" },
+      "icon": "https://knishiguchi19900706-eng.github.io/duo-reversi/icon.png",
+      "ios": { "appStoreId": "6820586447" },
+      "web": { "url": "https://knishiguchi19900706-eng.github.io/duo-reversi/" }
+    }
+  ]
+}
