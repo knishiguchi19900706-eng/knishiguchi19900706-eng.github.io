@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "updatedAt": "2026-10-30",
+  "updatedAt": "2026-10-31",
   "developer": {
     "appStoreDeveloperId": "1877488221",
     "siteUrl": "https://knishiguchi19900706-eng.github.io/"
@@ -54,6 +54,18 @@
       "icon": "https://knishiguchi19900706-eng.github.io/duo-reversi/icon.png",
       "ios": { "appStoreId": "6820586447" },
       "web": { "url": "https://knishiguchi19900706-eng.github.io/duo-reversi/" }
+    },
+    {
+      "token": "commutedash",
+      "status": "hidden",
+      "category": "game",
+      "order": 40,
+      "ageRating": 4,
+      "name": { "en": "Commute Dash", "ja": "出社ダッシュ！" },
+      "tagline": { "en": "Beat the rush-hour crowd to the office", "ja": "人混みをすり抜けて、同僚より先に出社" },
+      "icon": "https://knishiguchi19900706-eng.github.io/commute-dash/icon.png",
+      "ios": { "appStoreId": "6828925597" },
+      "web": { "url": "https://knishiguchi19900706-eng.github.io/commute-dash/" }
     }
   ]
 }
