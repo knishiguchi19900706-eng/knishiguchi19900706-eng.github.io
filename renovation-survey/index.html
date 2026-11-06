@@ -133,6 +133,13 @@
     background: #fff;
   }
   footer a { color: var(--blue-dark); }
+  .langbar { text-align: right; margin: -36px -4px 18px; }
+  .langbar button {
+    background: rgba(255,255,255,.16); color: #fff; border: 1px solid rgba(255,255,255,.5);
+    border-radius: 999px; padding: 4px 14px; font-size: 13px; cursor: pointer; margin-left: 4px;
+  }
+  .langbar button[aria-pressed="true"] { background: #fff; color: var(--blue-deep); }
+  [hidden] { display: none !important; }
   @media (max-width: 480px) {
     h1 { font-size: 26px; }
     .tagline { font-size: 14px; }
@@ -142,18 +149,24 @@
 <body class="grid-bg">
 
 <header>
-  <img class="icon" src="icon.png" alt="劣化調査アプリ アイコン">
-  <h1>劣化調査アプリ</h1>
-  <p class="tagline">図面にピン、写真で記録、報告書まで一気通貫。<br>外壁・大規模修繕の現場調査を iPhone / iPad で。</p>
-  <div class="badges">
-    <span class="badge">iPhone / iPad 対応</span>
-    <span class="badge">30日間無料お試し</span>
-    <span class="badge">PDF / Excel 出力</span>
+  <div class="langbar">
+    <button type="button" id="btn-ja" aria-pressed="true">日本語</button>
+    <button type="button" id="btn-en" aria-pressed="false">English</button>
   </div>
-  <a class="cta light" href="https://apps.apple.com/jp/app/id6769016983" target="_blank" rel="noopener">App Store で入手</a>
+  <img class="icon" src="icon.png" alt="劣化調査アプリ アイコン" data-alt-ja="劣化調査アプリ アイコン" data-alt-en="Renovation Survey icon">
+  <h1 data-ja="劣化調査アプリ" data-en="Renovation Survey">劣化調査アプリ</h1>
+  <p class="tagline" id="tagline-ja">図面にピン、写真で記録、報告書まで一気通貫。<br>外壁・大規模修繕の現場調査を iPhone / iPad で。</p>
+  <p class="tagline" id="tagline-en" hidden>Pin defects on drawings, record them with photos, and go all the way to the report.<br>Field surveys for building exteriors and large-scale repairs, on iPhone / iPad.</p>
+  <div class="badges">
+    <span class="badge" data-ja="iPhone / iPad 対応" data-en="iPhone / iPad">iPhone / iPad 対応</span>
+    <span class="badge" data-ja="30日間無料お試し" data-en="30-day free trial">30日間無料お試し</span>
+    <span class="badge" data-ja="PDF / Excel 出力" data-en="PDF / Excel export">PDF / Excel 出力</span>
+  </div>
+  <a class="cta light store-link" href="https://apps.apple.com/jp/app/id6769016983" target="_blank" rel="noopener" data-ja="App Store で入手" data-en="Download on the App Store">App Store で入手</a>
 </header>
 
-<main>
+<!-- ===================== 日本語 ===================== -->
+<main id="lang-ja">
   <section>
     <h2>主な機能</h2>
     <div class="features">
@@ -213,10 +226,122 @@
   </section>
 </main>
 
+<!-- ===================== English ===================== -->
+<main id="lang-en" hidden>
+  <section>
+    <h2>Key features</h2>
+    <div class="features">
+      <div class="card"><div class="em">📐</div><h3>Import drawings</h3><p>Import building drawings from PDF, images or DXF as they are. Manage several sheets (elevations, floor plans and more) in one project.</p></div>
+      <div class="card"><div class="em">📍</div><h3>Record defects with pins</h3><p>Pin loose tiles, cracks, spalling and other defects on the drawing. Pins are numbered automatically by legend, so positions and details are clear at a glance.</p></div>
+      <div class="card"><div class="em">📷</div><h3>Link site photos</h3><p>Photos you take are linked to their pins automatically, and the photo ledger is ready to export. No more hunting for which photo shows which defect.</p></div>
+      <div class="card"><div class="em">🧮</div><h3>Quantity totals and survey quantity table</h3><p>Quantities are totaled by legend, floor and face. Enter unit prices to get a survey quantity table with amounts, sorted by the item numbers of your estimate, and export it to Excel and PDF.</p></div>
+      <div class="card"><div class="em">🖨️</div><h3>PDF / Excel reports</h3><p>Print or export A3 drawing layouts to PDF, plus photo ledgers and Excel summary tables. No more copying things over back at the office.</p></div>
+      <div class="card"><div class="em">☁️</div><h3>Cloud sync</h3><p>On supported plans, survey data is saved to the cloud for sharing across devices and within your team, and for backup.</p></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Simple to use</h2>
+    <div class="flow">
+      <ol>
+        <li><b>Import a drawing</b> — add the drawing of the building from a PDF or a photo</li>
+        <li><b>Pin on site</b> — tap a defect and record its legend, quantity and photos</li>
+        <li><b>Export</b> — create the photo ledger, quantity totals, survey quantity table and drawing PDFs in one tap</li>
+      </ol>
+    </div>
+  </section>
+
+  <section id="worker-en" class="worker">
+    <h2>If you received a drawing / for workers</h2>
+    <p class="lead">Worker mode is free. No account needed.</p>
+    <p>This drawing was made with Worker mode in Renovation Survey. Install the app on your phone and use it in one of these ways.</p>
+    <div class="ways">
+      <div class="way"><h3>1. Survey on your own</h3><p>Just enter a site name and import a drawing (PDF or photo). After placing pins and photos, hand it off to the office with a hand-off code.</p></div>
+      <div class="way"><h3>2. Join with a site code</h3><p>Enter the site code (or scan the QR code) from the office to send pins and photos to the drawings of that site.</p></div>
+    </div>
+    <p class="office"><b>For offices and main contractors:</b> enter the hand-off code and the survey of the worker becomes a drawing project as it is. Photo ledgers, quantity totals and reports are exported from the office version (free for the first 30 days).</p>
+    <p style="text-align:center; margin-top:16px;"><a class="cta" href="https://apps.apple.com/app/id6769016983" target="_blank" rel="noopener">Download on the App Store (free)</a></p>
+    <p class="note" style="text-align:center;">Worker mode and surveying on your own are available in the latest version of the app.</p>
+  </section>
+
+  <section>
+    <h2>Pricing</h2>
+    <div class="trial">
+      <p><b>Try it free for the first 30 days.</b> To keep using it, purchase the premium plan (subscription) in the app.</p>
+      <p class="note">See the pricing screen in the app and the App Store for prices (shown in your currency) and plan details.</p>
+    </div>
+  </section>
+
+  <section>
+    <h2>Requirements</h2>
+    <table class="spec">
+      <tr><th>Devices</th><td>iPhone / iPad (on the App Store)</td></tr>
+      <tr><th>Developer</th><td>NK-FIELD (Kohei Nishiguchi)</td></tr>
+      <tr><th>Support</th><td><a href="https://docs.google.com/forms/d/e/1FAIpQLSfAHfIVb00BNQ286ZF1bdtMzlDWUJduS3hN_vc1tAi-J_bQ8g/viewform" target="_blank" rel="noopener">Contact form</a> (we are a small, individually run business, so a reply may take about two weeks)</td></tr>
+    </table>
+  </section>
+
+  <section style="text-align:center;">
+    <a class="cta" href="https://apps.apple.com/app/id6769016983" target="_blank" rel="noopener" style="margin:6px;">Download on the App Store</a>
+    <a class="cta" style="margin:6px; background:#fff; color:var(--blue-deep);" href="https://docs.google.com/forms/d/e/1FAIpQLSfAHfIVb00BNQ286ZF1bdtMzlDWUJduS3hN_vc1tAi-J_bQ8g/viewform" target="_blank" rel="noopener">Contact us</a>
+  </section>
+</main>
+
 <footer>
-  <p><a href="privacy.html">プライバシーポリシー</a> ｜ <a href="../index.html">NK-FIELD アプリ一覧</a></p>
+  <p><a href="privacy.html" id="privacy-link" data-ja="プライバシーポリシー" data-en="Privacy Policy">プライバシーポリシー</a> ｜ <a href="../index.html" data-ja="NK-FIELD アプリ一覧" data-en="NK-FIELD apps">NK-FIELD アプリ一覧</a></p>
   <p style="margin-top:6px;">© NK-FIELD (Kohei Nishiguchi)</p>
 </footer>
+
+<script>
+// 日本語 / English の切り替え（privacy.html と同じ作り）。
+// 優先順位: ?lang= 指定 > 前回の選択 > ブラウザの言語（日本語以外は英語）
+(function () {
+  var btnJa = document.getElementById('btn-ja');
+  var btnEn = document.getElementById('btn-en');
+  function apply(lang) {
+    var ja = lang === 'ja';
+    document.getElementById('lang-ja').hidden = !ja;
+    document.getElementById('lang-en').hidden = ja;
+    document.getElementById('tagline-ja').hidden = !ja;
+    document.getElementById('tagline-en').hidden = ja;
+    btnJa.setAttribute('aria-pressed', ja ? 'true' : 'false');
+    btnEn.setAttribute('aria-pressed', ja ? 'false' : 'true');
+    document.documentElement.lang = ja ? 'ja' : 'en';
+    document.title = ja ? '劣化調査アプリ — 図面にピン、写真で記録、報告書まで | NK-FIELD'
+                        : 'Renovation Survey — pin defects on drawings, record with photos, export reports | NK-FIELD';
+    var nodes = document.querySelectorAll('[data-ja][data-en]');
+    for (var i = 0; i < nodes.length; i++) {
+      nodes[i].textContent = nodes[i].getAttribute(ja ? 'data-ja' : 'data-en');
+    }
+    var icon = document.querySelector('.icon');
+    icon.alt = icon.getAttribute(ja ? 'data-alt-ja' : 'data-alt-en');
+    // 英語は利用者の国の App Store へ（/jp/ を付けない）
+    document.querySelector('header .store-link').href =
+        ja ? 'https://apps.apple.com/jp/app/id6769016983' : 'https://apps.apple.com/app/id6769016983';
+    document.getElementById('privacy-link').href = 'privacy.html?lang=' + (ja ? 'ja' : 'en');
+    try { localStorage.setItem('nkfield-rs-lang', ja ? 'ja' : 'en'); } catch (e) {}
+  }
+
+  var initial = null;
+  var q = location.search.match(/[?&]lang=(ja|en)/);
+  if (q) { initial = q[1]; }
+  if (!initial) {
+    try { initial = localStorage.getItem('nkfield-rs-lang'); } catch (e) {}
+  }
+  if (initial !== 'ja' && initial !== 'en') {
+    var nav = (navigator.language || 'ja').toLowerCase();
+    initial = nav.indexOf('ja') === 0 ? 'ja' : 'en';
+  }
+  apply(initial);
+  // 印刷した図面の QR は #worker を指す。英語の表示では英語の節へ
+  if (initial === 'en' && location.hash === '#worker') {
+    document.getElementById('worker-en').scrollIntoView();
+  }
+
+  btnJa.addEventListener('click', function () { apply('ja'); });
+  btnEn.addEventListener('click', function () { apply('en'); });
+})();
+</script>
 
 </body>
 </html>
