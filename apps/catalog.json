@@ -49,7 +49,7 @@
       "category": "game",
       "order": 30,
       "ageRating": 4,
-      "name": { "en": "Duo Reversi", "ja": "デュオ・リバーシ" },
+      "name": { "en": "Reversi Duo", "ja": "リバーシ・デュオ" },
       "tagline": { "en": "Reversi played with two-cell pieces", "ja": "2 マスの駒で遊ぶ新しいリバーシ" },
       "icon": "https://knishiguchi19900706-eng.github.io/duo-reversi/icon.png",
       "ios": { "appStoreId": "6820586447" },
